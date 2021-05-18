@@ -14,7 +14,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
          
           <Nav className="ml-auto">
-          <Button  variant="dark"  bg="dark"type="submit">CONTRIBUTE</Button>{' '}
+          <Button  variant="dark" href="https://github.com/04aditya24/COVID-19-Live-Updates"  bg="dark"type="submit">CONTRIBUTE</Button>{' '}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
