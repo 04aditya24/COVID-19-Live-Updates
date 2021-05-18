@@ -4,8 +4,12 @@ import styles from "./App.module.css";
 import { fetchData } from "./api";
 import coronaImage from "./images/covid.png";
 import Footer from "./components/Footer/Footer";
-import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
+import Statewise from "./components/StateData/StateData";
+
+import { Switch, Route } from 'react-router-dom';
+import Homepage from './components/Homepage/Homepage';
+
 
 class App extends Component {
   state = {
@@ -28,20 +32,14 @@ class App extends Component {
     const { data, country } = this.state;
     return (
       <div className={styles.container}>
-      
-        {!data ? <Loader /> : (
-                            <>
-                          <NavBar />
-                          <div style={{textAlign:"center"}}>   <img className={styles.image} src={coronaImage} /> </div>
-                            {/* <img className={styles.image} src={coronaImage} />  */}
-        <Cards data={data} />
-        <br></br>
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
+      <NavBar />
+        <Switch>
+          <Route path="/data" component={() => <Statewise />} />
+          <Route exact path="/" component={() => <Homepage data={data} image={styles.image} 
+          handleCountryChange={this.handleCountryChange}
+           coronaImage={coronaImage} country={country} />} />
+        </Switch>
         <Footer />
-
-                            </>
-        )}
       </div>
     );
   }
