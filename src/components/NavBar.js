@@ -23,15 +23,15 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <NavLink to="/">
-              <Button style={{ marginRight: "10px" }} variant="dark" bg="dark">
+              <Button style={{ marginRight: "10px" ,backgroundColor:"#00394d"} }>
                 Home
               </Button>
             </NavLink>{" "}
             <NavLink to="/data">
               <Button
-                style={{ marginRight: "10px" }}
-                variant="dark"
-                bg="dark"
+                style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}
+                // variant="dark"
+                // bg="dark"
                 type="submit"
               >
                 India States Data
@@ -39,10 +39,10 @@ const NavBar = () => {
             </NavLink>{" "}
             <Button
               variant="dark"
-              style={{ marginRight: "10px" }}
+              style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}
               href="https://github.com/04aditya24/COVID-19-Live-Updates"
-              bg="dark"
-              type="submit"
+              // bg="dark"
+               type="submit"
             >
               CONTRIBUTE
             </Button>{" "}
