@@ -37,6 +37,38 @@ const NavBar = () => {
                 India States Data
               </Button>
             </NavLink>{" "}
+            <NavLink to="/prevention">
+              <Button
+                style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}
+                // variant="dark"
+                // bg="dark"
+                type="submit"
+              >
+       Prevention
+              </Button>
+            </NavLink>{" "}
+            <NavLink to="/Symptoms">
+              <Button
+                style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}
+                // variant="dark"
+                // bg="dark"
+                type="submit"
+              >
+      Symptoms
+              </Button>
+            </NavLink>{" "}
+            
+            <NavLink to="/Exercise">
+              <Button
+                style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}
+                // variant="dark"
+                // bg="dark"
+                type="submit"
+              >
+     Exercise
+              </Button>
+            </NavLink>{" "}
+            
             <Button
               variant="dark"
               style={{ marginRight: "10px" ,backgroundColor:"#00394d"}}

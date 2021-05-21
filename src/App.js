@@ -6,9 +6,11 @@ import coronaImage from "./images/covid.png";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar";
 import Statewise from "./components/StateData/StateData";
-
+import Prevention from "./components/Prevention/Prevention";
+import Symptoms from "./components/Symptoms/Symptoms"
 import { Switch, Route } from 'react-router-dom';
 import Homepage from './components/Homepage/Homepage';
+import Exercise from "./components/Exercise/Exercise"
 
 
 class App extends Component {
@@ -34,6 +36,9 @@ class App extends Component {
       <div className={styles.container}>
       <NavBar />
         <Switch>
+        <Route path="/Exercise" component={() => <Exercise/>} /> 
+        <Route path="/prevention" component={() => <Prevention />} /> 
+          <Route path="/Symptoms" component={() => <Symptoms />} /> 
           <Route path="/data" component={() => <Statewise />} />
           <Route exact path="/" component={() => <Homepage data={data} image={styles.image} 
           handleCountryChange={this.handleCountryChange}
